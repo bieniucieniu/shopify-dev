@@ -1,0 +1,134 @@
+:root {
+    --font: "Inter", sans-serif;
+    --font-color: hsl(200, 4%, 13%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --background-decoration-color: hsl(154, 62%, 95%);
+    --button-color: hsl(180, 11%, 98%);
+    --border-color: hsl(210, 7%, 84%);
+    --shadow-color: hsl(0, 0%, 90%);
+    --border-dark-color: color: hsl(210, 3%, 37%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-family: var(--font);
+    font-weight: 400;
+}
+.search-icon {
+    height: 1rem;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px;
+}
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav a,
+nav button,
+nav input {
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 0.3rem;
+    border-style: none;
+    letter-spacing: 0.28px;
+    border-radius: 7px;
+    height: 2rem;
+}
+
+nav a:hover {
+    background-color: var(--button-color);
+}
+
+header nav {
+    width: 1300px;
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marketing-nav ul,
+.logging-search-nav ul {
+    align-items: center;
+    gap: 1rem;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding: 0.3rem;
+}
+.button:hover {
+    background-color: var(--button-color);
+    cursor: pointer;
+}
+
+.marketing-nav ul a .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 6px;
+    margin: 0;
+}
+
+@media (max-width: 1450px) {
+    .marketing-nav ul a .logo {
+        position: relative;
+        left: 0;
+        top: 0;
+        padding: 6px;
+        margin: 0;
+    }
+    header nav {
+        width: 100%;
+    }
+}
+
+.search {
+    display: flex;
+    position: relative;
+}
+
+.search input {
+    display: inline-block;
+    padding: 4px 28px;
+    border: 1px solid #5c5f62;
+    border-radius: 8px;
+    box-shadow:#000000 0px 2px 0px 0px;
+
+}
+
+
+.search img {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.search .search-launcher {
+    position: absolute;
+    width: 20px;
+    background-image: url("../img/search-launcher-light-b8b6c9828744bce05e47264d1c4fe7b2046f06d154f467be1b16b860511685d1.svg");
+    top: 6px;
+    left: 200px;
+}
