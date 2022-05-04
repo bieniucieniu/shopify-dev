@@ -1,6 +1,6 @@
 :root {
     --font: "Inter", sans-serif;
-    --font-color: hsl(200, 4%, 13%);
+    --font-color: hsl(210, 3%, 37%);
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --background-decoration-color: hsl(154, 62%, 95%);
@@ -20,6 +20,8 @@ body {
     font-size: 14px;
     font-family: var(--font);
     font-weight: 400;
+    padding: 0;
+    margin: 0;
 }
 .search-icon {
     height: 1rem;
@@ -30,8 +32,9 @@ header {
     top: 0;
     display: flex;
     justify-content: center;
-    padding: 0;
-    margin: 10px;
+    padding: 10px 0 10px;
+    margin: 0;
+    background-color: var(--white);
 }
 
 
@@ -86,7 +89,7 @@ header nav {
 .marketing-nav ul a .logo {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 7px;
     padding: 6px;
     margin: 0;
 }
@@ -131,4 +134,48 @@ header nav {
     background-image: url("../img/search-launcher-light-b8b6c9828744bce05e47264d1c4fe7b2046f06d154f467be1b16b860511685d1.svg");
     top: 6px;
     left: 200px;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.hero .hero-img{
+    background-image: url(../img/hero-1-f96f91f4e77538c4466476911bb54bf5dae5b215c00cd57dabe3243507b8b562.png);
+   background-size: auto 1128px;
+   background-repeat: no-repeat;
+}
+.hero .hero-text{
+    max-width: 600px;
+    justify-self: right;
+    padding: 120px 0 0;
+}
+
+.hero h1{
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 800;
+    margin: 0 0 24px;
+}
+
+.hero h3{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0px 0px 16px;
+}
+
+.hero-text p {
+    color: hsl(210, 3%, 37%);
+    font-size: 18px;
+    font-family: Inter;
+    margin: 0 0 16px;
+    line-height: 28px;
+    margin: 0px 0px 32px;
+}
+
+.hero-text p a{
+    color:hsl(210, 3%, 37%);
 }
