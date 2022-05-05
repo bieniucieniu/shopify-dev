@@ -4,7 +4,7 @@
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --background-decoration-color: hsl(154, 62%, 95%);
-    --button-color: hsl(180, 11%, 98%);
+    --button-color: hsl(0, 0%, 87%);
     --border-color: hsl(210, 7%, 84%);
     --shadow-color: hsl(0, 0%, 90%);
     --border-dark-color: color: hsl(210, 3%, 37%);
@@ -80,9 +80,9 @@ header nav {
 }
 
 .button {
+    background-color: transparent;
     display: flex;
     align-items: center;
-    background-color: var(--white);
     padding: 0.3rem;
 }
 .button:hover {
@@ -418,4 +418,64 @@ li .content{
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+}
+
+.footer-top{
+    background-color: hsl(0, 7%, 97%);
+    padding: 64px 0px;
+    margin: 0 20px;
+    border-radius: 16px; 
+
+}
+
+.footer-top .grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0 20px;
+}
+
+.grid-item h3{
+    color: #202223;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    margin: 0 0 16px;
+}
+
+.grid-item a{
+    text-decoration: none;
+    color: hsl(210, 3%, 37%);
+    padding:  5px 0;
+}
+
+.grid-item a:hover{
+    color: hsl(220, 2%, 26%);
+}
+
+.footer-nav{
+    max-width: 1250px;
+    color: #202223;
+    margin: auto;
+}
+
+.footer-nav a{
+    line-height: 70px;
+    font-size: 14px;
+    font-weight: 600;
+    margin:  0 14px 0 0;
+}
+
+.footer-bottom{
+    margin: 0 20px 20px 4px;
+    border-radius: 0 0 16px 16px;
+    background-color: hsl(0, 0%, 96%);
 }
