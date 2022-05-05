@@ -387,7 +387,6 @@ li .content{
 
 .community-card{
     text-decoration: none;
-    grid-column: span 1;
     display: flex;
     border-radius: 8px;
     background-color: hsl(229, 100%, 98%);
@@ -475,7 +474,7 @@ li .content{
 }
 
 .footer-bottom{
-    margin: 0 20px 20px 4px;
+    margin: 0 20px 4px 20px;
     border-radius: 0 0 16px 16px;
     background-color: hsl(0, 0%, 96%);
 }
