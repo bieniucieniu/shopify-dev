@@ -18,12 +18,11 @@
       <nav>
         <div class="marketing-nav">
           <ul>
-            <li>
+            <li class="logo">
               <a href="index.html"
                 ><img
                   src="img/shopify-dev-logo-light-100da87d8ee35fb04600643ee9092181cdfb0f4b6db9a4b102b491788560c938.svg"
                   alt="index"
-                  class="logo"
               /></a>
             </li>
             <li><a href="#">Apps</a></li>
@@ -31,10 +30,26 @@
             <li><a href="#">Custom sroefronts</a></li>
             <li><a href="#">Marketplace</a></li>
             <li>
-              <button class="button">
-                APIs and refernece
-                <img src="img/arrow-down-svgrepo-com.svg" alt="arrow down" />
-              </button>
+              <div class="dropdown">
+                <button class="button">
+                  APIs and refernece
+                  <img src="img/arrow-down-svgrepo-com.svg" alt="arrow down" />
+                </button>
+                <div class="dropdown-menu">
+                  <ul>
+                    <li>Apps</li>
+                    <li><a href="#">GraphQL Admin API</a></li>
+                    <li><a href="#">REST Admin API</a></li>
+                    <li>Themes</li>
+                    <li><a href="#">Liquid</a></li>
+                    <li><a href="#">Ajax API</a></li>
+                    <li>Custom storefronts</li>
+                    <li><a href="#">Storefront API</a></li>
+                    <li><a href="#">Hydrogen</a></li>
+                    <li><a href="#">View all</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -67,6 +82,11 @@
     </header>
     <section class="hero">
       <div class="hero-text">
+        <img
+          class="hero-1 hero-mobile"
+          src="/img/hero-1-mobile-9dcadd92111b5aa6ea3aff6bdfedbbe4af2d8492b440672f0d3daf6cf2867431.png"
+          alt="hero-1"
+        />
         <h1>Build anything. Reimagine commerce.</h1>
         <p>
           Millions of merchants trust Shopify to run their business—but they
@@ -74,6 +94,11 @@
           independence. Access powerful APIs to bring your ideas to life on the
           platform that makes commerce better for everyone.
         </p>
+        <img
+          class="hero-2 hero-mobile"
+          src="/img/hero-2-mobile-fc2064b2864fe9843073f19fd0582f0956d7097249d1c8012068f33a8e4becd8.png"
+          alt="hero-3"
+        />
         <h3>Develop apps that solve complex merchant problems</h3>
         <p>
           Expansive <a href="#">GraphQL</a> and <a href="#">REST APIs</a> let
@@ -127,6 +152,11 @@
             </a>
           </div>
         </div>
+        <img
+          class="hero-3 hero-mobile"
+          src="/img/hero-3-mobile-48969c3d204f00c1540177f50c110c87358b8dc4b4d5b783449e19e43e5af37b.png"
+          alt="hero-3"
+        />
       </div>
       <div class="hero-img"></div>
     </section>
@@ -295,5 +325,6 @@
         </nav>
       </div>
     </footer>
+    <script src="js/mian.js"></script>
   </body>
 </html>

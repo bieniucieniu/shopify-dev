@@ -14,7 +14,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-
 }
 
 
@@ -66,8 +65,13 @@ nav a:hover {
     background-color: var(--button-color);
 }
 
+
+nav .logo a:hover {
+    background-color: transparent;
+}
+
 header nav {
-    width: 1300px;
+    width: 1250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,26 +94,50 @@ header nav {
     cursor: pointer;
 }
 
-.marketing-nav ul a .logo {
+.marketing-nav .logo {
     position: absolute;
     left: 7px;
     top: 7px;
-    padding: 6px;
+    padding: 7px;
     margin: 0;
 }
 
-@media (max-width: 1450px) {
-    .marketing-nav ul a .logo {
-        position: relative;
-        left: 0;
-        top: 0;
-        padding: 6px;
-        margin: 0;
-    }
-    header nav {
-        width: 100%;
-    }
+.dropdown{
+    position: relative;
 }
+
+.dropdown-menu{
+    position: absolute;
+    background-color: white;
+    padding: 10px 40px 20px 7px;
+    width: 130%;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-30px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown-menu ul li:last-child{
+    padding-top: 12px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.dropdown-menu ul{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
 
 .search {
     display: flex;
@@ -185,6 +213,11 @@ header nav {
     font-size: 18px;
 }
 
+.hero-mobile{
+    width: 100%;
+    height: 0;
+}
+
 /* link in text */
 
 a{
@@ -250,6 +283,8 @@ a:hover{
     box-shadow:hsl(0, 0%, 90%) 0px 4px 0px 0px;
 }
 
+/* docs card */
+
 .docs-card{
     display: flex;
     align-items: center;
@@ -268,17 +303,16 @@ a:hover{
 
 /* banner text */
 .banner{
-    display: flex;
-    justify-content: center;
     background-color: hsl(154, 62%, 95%);
     padding: 64px 32px;
+    max-width: 100%;
     margin: 0 20px;
     border-radius: 16px;
 }
 
 .banner-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     max-width: 1250px;
 }
@@ -361,6 +395,10 @@ li .content{
     line-height: 20px;
     margin: 0;
 }
+
+/* community */
+
+
 .community p:last-of-type:after {
     content: '->';
     position: relative;
@@ -391,6 +429,7 @@ li .content{
     border-radius: 8px;
     background-color: hsl(229, 100%, 98%);
 
+
 }
 
 .community a{
@@ -418,6 +457,9 @@ li .content{
     font-size: 14px;
     line-height: 21px;
 }
+
+
+/* footer */
 
 .footer-top{
     background-color: hsl(0, 7%, 97%);
@@ -460,6 +502,7 @@ li .content{
     color: hsl(220, 2%, 26%);
 }
 
+
 .footer-nav{
     max-width: 1250px;
     color: #202223;
@@ -473,8 +516,95 @@ li .content{
     margin:  0 14px 0 0;
 }
 
+.footer-nav a:hover{
+    background-color: transparent;
+    color: black;
+}
+
 .footer-bottom{
     margin: 0 20px 4px 20px;
     border-radius: 0 0 16px 16px;
     background-color: hsl(0, 0%, 96%);
+}
+
+@media (max-width: 1450px) {
+    .marketing-nav .logo {
+        position: relative;
+        left: 0;
+        top: 0;
+        padding: 6px;
+        margin: 0;
+    }
+    header nav {
+        width: 100%;
+    }
+
+    .community{
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 650px;
+    }
+
+
+}
+
+@media (max-width: 1000px)  {
+    .footer-top .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .banner-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .banner-status ul{
+        grid-template-columns: repeat(2, 1fr);
+        max-width: none;
+    }
+
+    .banner-status{ 
+        justify-self: center;
+    }
+
+    .hero{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 0 32px;
+    }
+
+    .hero .hero-text{
+    justify-self: center;
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    }
+
+    .hero .hero-text h1,
+    .hero .hero-text h3,
+    .hero .hero-text p{
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+            
+    .hero-mobile{
+        height:auto;
+        margin: 20px 0;
+    }
+
+    .hero-mobile:first-of-type{
+        margin-top: 0;
+    }
+
+}
+
+@media (max-width: 800px){
+    .banner-status ul{
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 400px;
+    }
+}  
+
+@media (max-width: 720px){
+    .community{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+    }
 }
